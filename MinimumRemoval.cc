@@ -46,7 +46,7 @@ public:
             }
         }
         
-
+        // Replace the removal characters to 'N'
         if(PosLen.size()>=0){
             int num = PosLen.size();
             for(int i = 0; i < num;++i){
