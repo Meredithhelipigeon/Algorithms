@@ -20,3 +20,10 @@ If it is a palindromic sequence, return 1.
 If it is empty, return 0.  
 Libraries:  
 C++: std::reverse(a.begin(),a.end()) -> will change a string.  
+
+## Add One Row to Tree: 
+Description: Given the root of a binary tree, then value v and depth d, you need to add a row of nodes with value v at the given depth d. The root node is at depth 1.  
+Time Efficiency: O(log)  
+Algorithm:  
+Find every tree at depth N-1 and change its left subtree and right subtree to the new trees. Also let the left subtree and right subtree be under the new trees.  
+(Use DFS recursion)
