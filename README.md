@@ -26,4 +26,10 @@ Description: Given the root of a binary tree, then value v and depth d, you need
 Time Efficiency: O(log)  
 Algorithm:  
 Find every tree at depth N-1 and change its left subtree and right subtree to the new trees. Also let the left subtree and right subtree be under the new trees.  
-(Use DFS recursion)
+(Use DFS recursion) 
+
+## Group the People Given the Group Size They Belong To:  
+Description: There are n people that are split into some unknown number of groups. Each person is labeled with a unique ID from 0 to n - 1.You are given an integer array groupSizes, where groupSizes[i] is the size of the group that person i is in. For example, if groupSizes[1] = 3, then person 1 must be in a group of size 3. Return a list of groups such that each person i is in a group of size groupSizes[i].  
+Time Efficiency: O(n)  
+Algorithm:  
+Classify the elements in the group size through direct hashing. Then if the number is full, generalize a group.  
