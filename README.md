@@ -33,3 +33,10 @@ Description: There are n people that are split into some unknown number of group
 Time Efficiency: O(n)  
 Algorithm:  
 Classify the elements in the group size through direct hashing. Then if the number is full, generalize a group.  
+
+## Maximum Score of a Good Subarray[Greedy Algorithm]:
+Description: You are given an array of integers nums (0-indexed) and an integer k. The score of a subarray (i, j) is defined as min(nums[i], nums[i+1], ..., nums[j]) * (j - i + 1). A good subarray is a subarray where i <= k <= j. Return the maximum possible score of a good subarray.  
+Time Efficiency: O(n)  
+Algorithm:
+We want to find the best combinations near the index k. There are (k-1)\*(n-k) different combinations, which is in O(n^2) if we want to calculate each of them. It is too much so that we consider at one step, we tend to choose the larger one since the coverage is the same. And we consider that to decide go left and right until the whole array is visited.  
+
