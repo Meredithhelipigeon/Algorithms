@@ -40,3 +40,9 @@ Time Efficiency: O(n)
 Algorithm:
 We want to find the best combinations near the index k. There are (k-1)\*(n-k) different combinations, which is in O(n^2) if we want to calculate each of them. It is too much so that we consider at one step, we tend to choose the larger one since the coverage is the same. And we consider that to decide go left and right until the whole array is visited.  
 
+## Encode and Decode TinyURL[System Design]:  
+Description: Design the encode and decode methods for the TinyURL service. There is no restriction on how your encode/decode algorithm should work. You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL.  
+Algorithm: 
+We map the last 6 characters of the original URL to characters from [A-Z],[a-z],[0,9] with hash function ord(n)%62 to generate the short URL. And then we store [shortURL, longURL] in a dictionary. We return the long URL by the dictionary.  
+
+
