@@ -91,5 +91,3 @@ Water can only flow in four directions: up, down, left, and right. Water flows f
 Return a list of grid coordinates where water can flow to both the Pacific and Atlantic oceans.  
 Algorithm: BFS. Have a list of frontier and use this frontier to add new states.  
 Strategy: directin array direction = [[0,1],[0,-1],[1,0],[-1,0]]
-
-He
