@@ -82,3 +82,12 @@ You can walk back and forth between rooms freely.
 Algorithm: Have a list of frontier and use this frontier to open new rooms. We then update the frontier. "dynamical change". Mark the visited room to prevent "revisit".  
 Optimization: When visiting the room, calculate the number instead of calculating the number after updating the checklist for all rooms, which takes O(n).  
 
+## Pacific Atlantic Water Flow
+Description:   
+You are given an m x n integer matrix heights representing the height of each unit cell in a continent. The Pacific ocean touches the continent's left and top edges, and the Atlantic ocean touches the continent's right and bottom edges.
+
+Water can only flow in four directions: up, down, left, and right. Water flows from a cell to an adjacent one with an equal or lower height.
+
+Return a list of grid coordinates where water can flow to both the Pacific and Atlantic oceans.  
+Algorithm: BFS. Have a list of frontier and use this frontier to add new states.  
+Strategy: directin array direction = [[0,1],[0,-1],[1,0],[-1,0]]
