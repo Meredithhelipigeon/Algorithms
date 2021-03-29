@@ -11,8 +11,6 @@ class Solution(object):
         ThisDic = {}
         for l in knowledge:
             ThisDic[l[0]]=l[1]
-        # print(ThisDic)
-        # print(ThisDic.get(knowledge[0][0]))
         for k in s:
             if k == ')' :
                 iskey = False
