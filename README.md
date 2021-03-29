@@ -56,5 +56,29 @@ Version 2: How to approach the number of 3: O(logn), keep track of where to squa
 Version 3: Use the library "pow(base, times, modNumber)" built in Python. The time efficiency is also O(log n)  
 Time effciency: O(log n)
 
+## Evaluate the Bracket Pairs of a String
+Description: You are given a string s that contains some bracket pairs, with each pair containing a non-empty key.  
+Time Efficency: O(len(knowledge)+len(string))  
+Algorithm: First change the Lists into the dictionary because in python, dictionary works the same as hash table. So the time efficiency is increased largely by using dictionary for serach. And then we walk through the string and replace the key with the value or question mark by searching in the dictionary.  
 
+## Minimum Number of Operations to Reinitialize a Permutation
+Algorithm: This is intuitive  
+Concept in Python: if we want deep copy, we should import copy library and use "copy.copy(list1)". If we purely use operator "assignment", the new list and the old list will change sumultaneously.
+
+## Number of Different Integers in a String  
+Descrption: You are given a string word that consists of digits and lowercase English letters.  You will replace every non-digit character with a space. For example, "a123bc34d8ef34" will become " 123  34 8  34". Notice that you are left with some integers that are separated by at least one space: "123", "34", "8", and "34".  Return the number of different integers after performing the replacement operations on word.  
+Strategy: deal with leading zero: if the last stored string is "0" we then update with the new character(it could prevent us from deleting the "0").  
+
+## Keys and Rooms
+Description:  
+There are N rooms and you start in room 0.  Each room has a distinct number in 0, 1, 2, ..., N-1, and each room may have some keys to access the next room. 
+
+Formally, each room i has a list of keys rooms[i], and each key rooms[i][j] is an integer in [0, 1, ..., N-1] where N = rooms.length.  A key rooms[i][j] = v opens the room with number v.
+
+Initially, all the rooms start locked (except for room 0). 
+
+You can walk back and forth between rooms freely.
+
+Algorithm: Have a list of frontier and use this frontier to open new rooms. We then update the frontier. "dynamical change". Mark the visited room to prevent "revisit".  
+Optimization: When visiting the room, calculate the number instead of calculating the number after updating the checklist for all rooms, which takes O(n).  
 
