@@ -45,4 +45,16 @@ Description: Design the encode and decode methods for the TinyURL service. There
 Algorithm: 
 We map the last 6 characters of the original URL to characters from [A-Z],[a-z],[0,9] with hash function ord(n)%62 to generate the short URL. And then we store [shortURL, longURL] in a dictionary. We return the long URL by the dictionary.  
 
+## Maximize Number of Nice Divisors
+Description: You are given a positive integer primeFactors. You are asked to construct a positive integer n that satisfies the following conditions:  
+1) The number of prime factors of n (not necessarily distinct) is at most primeFactors.
+2) The number of nice divisors of n is maximized. Note that a divisor of n is nice if it is divisible by every prime factor of n. For example, if n = 12, then its prime factors are [2,2,3], then 6 and 12 are nice divisors, while 3 and 4 are not.
+
+Return the number of nice divisors of n. Since that number can be too large, return it modulo 10^9 + 7.
+Algorithm: We realize that divide them into 3 and 2 is the most efficient. Therefore, we try to split it in 3 and 2. 
+Version 2: How to approach the number of 3: O(logn), keep track of where to square and where to plus one(use a stack to denote)  
+Version 3: Use the library "pow(base, times, modNumber)" built in Python. The time efficiency is also O(log n)  
+Time effciency: O(log n)
+
+
 
