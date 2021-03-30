@@ -91,3 +91,14 @@ Water can only flow in four directions: up, down, left, and right. Water flows f
 Return a list of grid coordinates where water can flow to both the Pacific and Atlantic oceans.  
 Algorithm: BFS. Have a list of frontier and use this frontier to add new states.  
 Strategy: directin array direction = [[0,1],[0,-1],[1,0],[-1,0]]
+
+## Flip Binary Tree To Match Preorder Traversal
+Description: You are given the root of a binary tree with n nodes, where each node is uniquely assigned a value from 1 to n. You are also given a sequence of n values voyage, which is the desired pre-order traversal of the binary tree.
+
+Flip the smallest number of nodes so that the pre-order traversal of the tree matches voyage.
+
+Return a list of the values of all flipped nodes. 
+
+Algorithm: use DFS to search.   
+Strategy: collections.deque()  
+Optimization: Do not change the original list voyage to increase the time efficiency.
