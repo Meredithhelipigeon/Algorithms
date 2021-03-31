@@ -102,3 +102,13 @@ Return a list of the values of all flipped nodes.
 Algorithm: use DFS to search.   
 Strategy: collections.deque()  
 Optimization: Do not change the original list voyage to increase the time efficiency.
+
+## Russian Doll Envelopes
+Description: You are given a 2D array of integers envelopes where envelopes[i] = [wi, hi] represents the width and the height of an envelope.
+
+One envelope can fit into another if and only if both the width and height of one envelope are greater than the other envelope's width and height.
+
+Return the maximum number of envelopes you can Russian doll (i.e., put one inside the other).
+
+Algorithm: First sort the envelopes by width. And the problem then becomes finding the longest increasing numbers in this array.
+Time Efficiency: O(nlogn)
