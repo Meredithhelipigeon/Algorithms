@@ -110,5 +110,5 @@ One envelope can fit into another if and only if both the width and height of on
 
 Return the maximum number of envelopes you can Russian doll (i.e., put one inside the other).
 
-Algorithm: First sort the envelopes by width. And the problem then becomes finding the longest increasing numbers in this array.
+Algorithm: First sort the envelopes by width. And the problem then becomes finding the longest increasing numbers in this array.  
 Time Efficiency: O(nlogn)
