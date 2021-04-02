@@ -112,3 +112,12 @@ Return the maximum number of envelopes you can Russian doll (i.e., put one insid
 
 Algorithm: First sort the envelopes by width. And the problem then becomes finding the longest increasing numbers in this array.  
 Time Efficiency: O(nlogn)
+
+## Palindrome Linked List
+Description: Given the head of a singly linked list, return true if it is a palindrome.  
+
+Algorithm: Use fast and slow algorithm to get the median of a linked list. Reverse the part before the median. Check the list of the first part and the second part.
+
+Time Efficiency: O(n) time and O(1) space
+
+
