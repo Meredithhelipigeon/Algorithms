@@ -141,3 +141,10 @@ Algorithm:
 Use DFS to search the depth of each path based on the starting point. While calculating the depth of each point, we may use the previous calculation. Hence, import python functools-Iru_cache().
 
 Time Efficiency: O(n^2)
+
+## Deepest Leaves Sum
+Description: Given the root of a binary tree, return the sum of values of its deepest leaves.
+
+Algorithm: Since we calculate the leaves in the deepest layer, it is easy to think of BFS. We use BFS and sum up the leaves in the deepest layer. 
+
+Time Efficiency: O(n)
