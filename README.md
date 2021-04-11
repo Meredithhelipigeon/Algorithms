@@ -130,3 +130,14 @@ A set x is a subset of a set y if all elements of x are also elements of y.
 Algorithm: Form a DP matrix((n+1)*(m+1)). Add element from the string list one by one. Update the DP matrix from n->0, m->0.
 
 Time efficiency: O(len(str)\*m\*n)
+
+## Longest Increasing Path in a Matrix:
+Descrption:  
+Given an m x n integers matrix, return the length of the longest increasing path in matrix.
+
+From each cell, you can either move in four directions: left, right, up, or down. You may not move diagonally or move outside the boundary (i.e., wrap-around is not allowed).
+
+Algorithm:  
+Use DFS to search the depth of each path based on the starting point. While calculating the depth of each point, we may use the previous calculation. Hence, import python functools-Iru_cache().
+
+Time Efficiency: O(n^2)
