@@ -148,3 +148,15 @@ Description: Given the root of a binary tree, return the sum of values of its de
 Algorithm: Since we calculate the leaves in the deepest layer, it is easy to think of BFS. We use BFS and sum up the leaves in the deepest layer. 
 
 Time Efficiency: O(n)
+
+## Beautiful Arrangement(2)
+Description:  
+Given two integers n and k, you need to construct a list which contains n different positive integers ranging from 1 to n and obeys the following requirement:
+Suppose this list is [a1, a2, a3, ... , an], then the list [|a1 - a2|, |a2 - a3|, |a3 - a4|, ... , |an-1 - an|] has exactly k distinct integers.
+
+If there are multiple answers, print any of them.
+
+Algorithm:  
+If we want every difference distinct, we use the smallest, the biggest respectively... So if we want k distinct difference, we use that strategy to find k-1 distinct elements and then the others are placed within the difference of 1.
+
+Time Efficiency: O(n)
