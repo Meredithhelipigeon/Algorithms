@@ -160,3 +160,8 @@ Algorithm:
 If we want every difference distinct, we use the smallest, the biggest respectively... So if we want k distinct difference, we use that strategy to find k-1 distinct elements and then the others are placed within the difference of 1.
 
 Time Efficiency: O(n)
+
+## Flatten Nested List Iterator:
+Description:
+You are given a nested list of integers nestedList. Each element is either an integer or a list whose elements may also be integers or other lists. Implement an iterator to flatten it.
+
