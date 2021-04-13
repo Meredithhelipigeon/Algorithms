@@ -24,6 +24,7 @@ class NestedIterator:
     
     def __init__(self, nestedList: [NestedInteger]):
         self.L=[]
+        self.cur=0
         def getList(nestedList):
             for item in nestedList:
                 if item.isInteger():
@@ -34,10 +35,11 @@ class NestedIterator:
                 
     def next(self) -> int:
         if len(self.L)!=0:
-            return self.L.pop(0)
+            self.cur+=1
+            return self.L[self.cur-1]
 
     def hasNext(self) -> bool:
-        if len(self.L)==0:
+        if self.cur==len(self.L):
             return False
         else:
             return True
