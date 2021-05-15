@@ -165,3 +165,7 @@ Time Efficiency: O(n)
 Description:
 You are given a nested list of integers nestedList. Each element is either an integer or a list whose elements may also be integers or other lists. Implement an iterator to flatten it.
 
+Algorithm:
+Use the recursion to break the list.  
+While iterating the list, don't change the data structure.
+
