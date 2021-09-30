@@ -169,3 +169,15 @@ Algorithm:
 Use the recursion to break the list.  
 While iterating the list, don't change the data structure.
 
+## Maximum Size Subarray Sum Equals k:  
+Description: 
+Given an integer array nums and an integer k, return the maximum length of a subarray that sums to k. If there isn't one, return 0 instead.  
+
+Algorithm:  
+Step 1. calculate the prefix array `sub`.  
+Step 2. (if sub[i]-sub[j]==k => it means that there is an subarray sums to k.). 
+        use a hashmap to locate 'sub'.
+Step 3. find out the "difference" by hashmap.  
+
+
+
