@@ -187,6 +187,8 @@ Return true if you can reach the last index, or false otherwise.
 
 Algorithm:  
 Solution 1. Define a DP and let DP[i] as the boolean denoting whether we could go to the last index(recurrence is super easy).  
-(Time complexity is O(m
+Time complexity is O(mn).  
+Solution 2. Since at each step, nums[i] denotes the max gap that we could jump(continuously), nums[i]+i is the maximum length that we could jump. Keeping track of the max length could solve the problem.
+Time complexity is O(n).  
 
 
