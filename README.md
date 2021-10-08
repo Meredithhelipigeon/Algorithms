@@ -179,5 +179,16 @@ Step 2. (if sub[i]-sub[j]==k => it means that there is an subarray sums to k.).
         use a hashmap to locate 'sub'.
 Step 3. find out the "difference" by hashmap.  
 
+## Jump Game:  
+Description:  
+You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position.  
+
+Return true if you can reach the last index, or false otherwise.  
+
+Algorithm:  
+Solution 1. Define a DP and let DP[i] as the boolean denoting whether we could go to the last index(recurrence is super easy).  
+Time complexity is O(mn).  
+Solution 2. Since at each step, nums[i] denotes the max gap that we could jump(continuously), nums[i]+i is the maximum length that we could jump. Keeping track of the max length could solve the problem.
+Time complexity is O(n).  
 
 
