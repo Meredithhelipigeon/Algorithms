@@ -191,4 +191,30 @@ Time complexity is O(mn).
 Solution 2. Since at each step, nums[i] denotes the max gap that we could jump(continuously), nums[i]+i is the maximum length that we could jump. Keeping track of the max length could solve the problem.
 Time complexity is O(n).  
 
+## Stock Price Flucuation:  
+Description:  
+You are given a stream of records about a particular stock. Each record contains a timestamp and the corresponding price of the stock at that timestamp.  
+
+Unfortunately due to the volatile nature of the stock market, the records do not come in order. Even worse, some records may be incorrect. Another record with the same timestamp may appear later in the stream correcting the price of the previous wrong record. 
+
+Design an algorithm that:
+
+Updates the price of the stock at a particular timestamp, correcting the price from any previous records at the timestamp.  
+Finds the latest price of the stock based on the current records. The latest price is the price at the latest timestamp recorded.  
+Finds the maximum price the stock has been based on the current records.  
+Finds the minimum price the stock has been based on the current records.  
+
+Algorithm:  
+1. Use a maxHeap and a minHeap to store the price and timestamp.  
+2. Use a dictionary to store the current price and timestamp pair.  
+3. Get maximum: pop the maxHeap until there is a current version pair.
+
+Time Complexity:  
+1. 'update': O(logn).  
+2. 'max'/'min': O(nlogn).  
+3. 'current': O(1).  
+
+How to think of this algorithm:  
+dynamic min => minHeap => Add a rule, pop following the rule (accepted)  
+dynamic min => minHeap => Update immediately => low efficiency (unaccepted)
 
