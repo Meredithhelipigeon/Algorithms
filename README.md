@@ -218,3 +218,11 @@ How to think of this algorithm:
 dynamic min => minHeap => Add a rule, pop following the rule (accepted)  
 dynamic min => minHeap => Update immediately => low efficiency (unaccepted)
 
+## Word Search:  
+Description:  
+Given an m x n grid of characters board and a string word, return true if word exists in the grid.
+
+The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.  
+
+Algorithm:  
+Using backtrack to make sure that for each path, we mark visited and revert back if there is no solution.
