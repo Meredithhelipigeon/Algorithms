@@ -1,17 +1,19 @@
 class RandomizedSet(object):
 
     def __init__(self):
-        self.randomSet=set()
+        self.randomDic={}
+        self.randomList=[]
 
     def insert(self, val):
         """
         :type val: int
         :rtype: bool
         """
-        if val in self.randomSet:
+        if val in self.randomDic and not self.randomDic[val]==-1 :
             return False
         else:
-            self.randomSet.add(val)
+            self.randomDic[val]=len(self.randomList)
+            self.randomList.append(val)
             return True
             
 
@@ -20,8 +22,11 @@ class RandomizedSet(object):
         :type val: int
         :rtype: bool
         """
-        if val in self.randomSet:
-            self.randomSet.remove(val)
+        if val in self.randomDic and not self.randomDic[val]==-1:
+            self.randomList[self.randomDic[val]]=self.randomList[-1]
+            self.randomDic[self.randomList[-1]]=self.randomDic[val]
+            self.randomList.pop()
+            self.randomDic[val]=-1
             return True
         else:
             return False
@@ -30,7 +35,8 @@ class RandomizedSet(object):
         """
         :rtype: int
         """
-        return random.sample(self.randomSet,1)[0]
+        index=random.randint(0,len(self.randomList)-1)
+        return self.randomList[index]
         
 
 
