@@ -18,7 +18,7 @@ def find_swap_1(r,rlist):
             ret.append(other_r)
     return ret
 
-print(find_swap_1("five guys",["five ugsy", "fiee guys", "eivf guys"]))
+# print(find_swap_1("five guys",["five ugsy", "fiee guys", "eivf guys"]))
 
 def find_swap_k(r,rlist,k):
     ret=[]
