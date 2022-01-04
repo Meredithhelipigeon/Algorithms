@@ -6,7 +6,7 @@
 #         self.right = None
 
 class Solution:
-    def inorderSuccessor(self, root: 'TreeNode', p: 'TreeNode') -> 'Optional[TreeNode]':
+    def inorderSuccessor1(self, root: 'TreeNode', p: 'TreeNode') -> 'Optional[TreeNode]':
         if root==None or p==None:
             return None
         successor = None
@@ -35,4 +35,17 @@ class Solution:
             successorVal = leftmostRight.val
             successor = leftmostRight
         
+        return successor
+    
+    def inorderSuccessor2(self, root: 'TreeNode', p: 'TreeNode') -> 'Optional[TreeNode]':
+        successor = None
+        
+        while root:
+            
+            if p.val >= root.val:
+                root = root.right
+            else:
+                successor = root
+                root = root.left
+                
         return successor
