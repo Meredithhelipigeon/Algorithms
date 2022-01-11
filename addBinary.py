@@ -19,3 +19,23 @@ class Solution:
             ret.append(str(last))
  
         return "".join(list(reversed(ret)))
+    
+    def addBinary2(self, a: str, b: str) -> str:
+        ret=[]
+        last=0
+        n = max(len(a), len(b))
+        a, b = a.zfill(n), b.zfill(n)
+
+        for i in range(n-1,-1,-1):
+            cur=last
+            if a[i]=='1':
+                cur+=1
+            if b[i]=='1':
+                cur+=1
+            
+            ret.append(str(cur%2))
+            last=cur//2
+        if last!=0:
+            ret.append(str(last))
+ 
+        return "".join(list(reversed(ret)))
