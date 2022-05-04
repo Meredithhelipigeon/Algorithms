@@ -1,11 +1,12 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
+
+ // Definition for singly-linked list.
+ struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+
+
 class Solution1 {
 public:
     bool hasCycle(ListNode *head) {
@@ -33,7 +34,7 @@ public:
 class Solution2 {
 public:
     bool hasCycle(ListNode *head) {
-        if (head==NULL) {
+        if (head == NULL) {
             return false;
         }
         // set the start point differently
