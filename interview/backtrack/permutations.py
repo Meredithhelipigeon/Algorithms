@@ -35,3 +35,7 @@ class Solution2(object):
         
         permutation(0,nums)
         return ret
+
+# Question: Why we use backtracking here? Why not use the simplest method: 
+#   know the permutations for indices 0 to i and add index i+1 to permuation list?
+# Answer: 
